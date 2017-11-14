@@ -6,7 +6,7 @@ We also had a requirement to show a different message depending if it was extern
 
 The example js file has comments for further assistance.
 
-##Quick start 
+## Quick start 
 
 Add this to your html.tpl.php file:
 
@@ -25,7 +25,7 @@ Add this to your html.tpl.php file:
 
 This will take any a href that isn't internal, add the "external" class, and then show the message when the link is selected. This doesn't take into account https sites - if "$('a[href^="http:" was changed to "$('a[href^="https:" this would swap the problem.
 
-##Custom message based on URL
+## Custom message based on URL
 
 The proper intention of this code was to apply a class to all external websites, then modify the class if they're a particular URL.
 
@@ -65,15 +65,15 @@ Add this to your html.tpl.php file if you have a need to show different messages
     </script>
 
 Any number of custom messages for urls can be added by adding this text under var sitesClasses:
-    {
-    hostname: 'URL', 
-    class: 'class', 
-    message: 'Your message'
-    },
+   ``` {
+   ``` hostname: 'URL', 
+   ``` class: 'class', 
+   ``` message: 'Your message'
+   ``` },
 
 This will mitigate the http/https issue if one of the selected websites has a custom external link message.
 
-##Creation Information
+## Creation Information
 
 Created 14/11/2017
 
