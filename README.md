@@ -65,11 +65,13 @@ Add this to your html.tpl.php file if you have a need to show different messages
     </script>
 
 Any number of custom messages for urls can be added by adding this text under var sitesClasses:
-   ``` {
-   ``` hostname: 'URL', 
-   ``` class: 'class', 
-   ``` message: 'Your message'
-   ``` },
+```   
+   {
+   hostname: 'URL', 
+   class: 'class', 
+   message: 'Your message'
+    },
+```
 
 This will mitigate the http/https issue if one of the selected websites has a custom external link message.
 
