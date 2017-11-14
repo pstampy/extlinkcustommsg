@@ -1,18 +1,25 @@
 jQuery(document).ready(function($) {
 
-$('a[href^="http://"]').filter(function() {
+
+//Find/save your host name to exclude class being added to a href
+$('a[href^="https://"]').filter(function() {
 	return this.hostname && this.hostname !== location.hostname;
     })
+//Add class "external" to all other a href (eg external website links)
     .addClass("external")
 
-$('[href*="business.gov.au"]').removeClass('external');
-$('[href*="business.gov.au"]').addClass('business');
+//Remove then add a different class to particular URLs    
 
-$('[href*="industry.gov.au"]').removeClass('external');
-$('[href*="industry.gov.au"]').addClass('industry');
+$('[href*="drupal.org"]').removeClass('external');
+$('[href*="drupal.org"]').addClass('drupal');
+
+$('[href*="stackoverflow.com"]').removeClass('external');
+$('[href*="stackoverflow.com"]').addClass('stackoverflow');
+
+//If a href has .external, display this message when selected.
 
 $('a.external').on('click',function(){
-      var x = window.confirm('You are now leaving the ministers website for a website external to the department');
+      var x = window.confirm('You are now leaving this website for an external website.');
       var val = false;
       if (x)
       val = true;
@@ -22,8 +29,10 @@ $('a.external').on('click',function(){
 
     });
 
-$('a.industry').on('click',function(){
-      var x = window.confirm('You are now leaving the ministers website for the main industry website');
+//If a href has .drupal, display this msg when link is selected
+
+$('a.drupal').on('click',function(){
+      var x = window.confirm('You are now leaving this website for the Drupal.org website');
       var val = false;
       if (x)
       val = true;
@@ -33,8 +42,11 @@ $('a.industry').on('click',function(){
 
     });
 
-$('a.business').on('click',function(){
-      var x = window.confirm('You are now leaving the ministers website for business gov au website');
+
+//If a href has .stackoverflow, display this msg when link is selected
+
+$('a.stackoverflow').on('click',function(){
+      var x = window.confirm('You are now leaving this website for the stackoverflow website');
       var val = false;
       if (x)
       val = true;
