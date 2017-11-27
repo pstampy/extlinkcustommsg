@@ -1,8 +1,10 @@
 # extlinkcustommsg - About
 
-extlinkcustommsg was created in place of the extlink module for drupal (https://www.drupal.org/project/extlink) being unavailable in the GovCMS distro (SaaS).
+Firstly, I don't think this is a great idea, but:
 
-We also had a requirement to show a different message depending if it was external to our department, or internal to our department, but external to the particular website.
+We had a requirement to show a different message depending if it was external to our department, or internal to our department, but external to the particular website. This can later be modified to be a modal or just a hover link msg.
+
+extlinkcustommsg was created in place of the extlink module for drupal (https://www.drupal.org/project/extlink) being unavailable in the GovCMS distro (SaaS).
 
 The example js file has comments for further assistance.
 
@@ -74,25 +76,3 @@ Any number of custom messages for urls can be added by adding this text under va
 ```
 
 This will mitigate the http/https issue if one of the selected websites has a custom external link message.
-
-## Creation Information
-
-Created 14/11/2017
-
-Margery Tongway
-
-pstampy@gmail.com
-***
-Enthusiasm noted on 14/11/2017
-
-by
-
-Mikaela McGrath - https://github.com/mikaelamcgrath
-
-Ben Jackson - https://github.com/shreddedbacon
-***
-Refined 15/11/2017
-
-Ben Jackson
-
-https://github.com/shreddedbacon
