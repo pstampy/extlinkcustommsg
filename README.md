@@ -15,7 +15,7 @@ Add this to your html.tpl.php file:
 
     <script type="text/javascript" language="javascript">
     jQuery(document).ready(function($) {
-    $('a[href^="http://"]').filter(function() {
+    $('a[href^="http"]').filter(function() {
     return this.hostname && this.hostname !== location.hostname;
     })
     .addClass("external")
@@ -25,7 +25,7 @@ Add this to your html.tpl.php file:
     });
     </script>
 
-This will take any a href that isn't internal, add the "external" class, and then show the message when the link is selected. This doesn't take into account https sites - if "$('a[href^="http:" was changed to "$('a[href^="https:" this would swap the problem.
+This will take any a href that isn't internal, add the "external" class, and then show the message when the link is selected. 
 
 ## Custom message based on URL
 
@@ -67,7 +67,7 @@ Add this to your html.tpl.php file if you have a need to show different messages
     </script>
 
 Any number of custom messages for urls can be added by adding this text under var sitesClasses:
-```   
+```
    {
    hostname: 'URL', 
    class: 'class', 
@@ -75,4 +75,3 @@ Any number of custom messages for urls can be added by adding this text under va
     },
 ```
 
-This will mitigate the http/https issue if one of the selected websites has a custom external link message.
